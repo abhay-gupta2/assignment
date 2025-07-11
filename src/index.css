@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 5s infinite;
+}
+
+.video:hover .video1{
+    display: block;
+    position: absolute;
+    top: -250px;
+}
+
+.text:hover .text1{
+    display: block;
+    position: absolute;
+    top: 110px;
+    left: -80px;
+    z-index: 10;
+}
+
+.text:hover .rating{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    z-index: 10;
+}
