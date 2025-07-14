@@ -19,12 +19,11 @@ const FullscreenGridScroll = () => {
   const [filledCells, setFilledCells] = useState(getRandomCells());
 
   useEffect(() => {
-    const handleScroll = () => {
+    const intervalId = setInterval(() => {
       setFilledCells(getRandomCells());
-    };
+    }, 2000);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
